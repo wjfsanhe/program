@@ -1,0 +1,68 @@
+﻿<Window
+    x:Class="Test3D.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Background="{DynamicResource PictureBrush}"
+    PreviewKeyDown="Window_PreviewKeyDown"
+    PreviewKeyUp="Window_PreviewKeyUp"
+    PreviewMouseMove="Window_PreviewMouseMove"      
+    Title="Window1">
+    <Window.Resources>
+        <ImageBrush x:Key="PictureBrush" ImageSource="/Test3D;component/宇宙2.jpg"/>
+        <ImageBrush x:Key="WallBrush" ImageSource="/Test3D;component/流氓兔.gif"/>
+    </Window.Resources>
+    <Grid>
+        <Viewport3D>
+            <Viewport3D.Camera>
+                <PerspectiveCamera Position="0 0 2" x:Name="_camera" LookDirection="0 0 -1" FieldOfView="120" UpDirection="0,1,0">
+                    <PerspectiveCamera.Transform>
+                        <Transform3DGroup>                               
+                            <RotateTransform3D CenterX="{Binding ElementName=_camera, Path=Position.X}"
+                                               CenterY="{Binding ElementName=_camera, Path=Position.Y}"
+                                               CenterZ="{Binding ElementName=_camera, Path=Position.Z}">
+                                <RotateTransform3D.Rotation>
+                                    <AxisAngleRotation3D x:Name="_rotateX" Axis="1 0 0"></AxisAngleRotation3D>                                     
+                                </RotateTransform3D.Rotation>
+                            </RotateTransform3D>
+                            <RotateTransform3D CenterX="{Binding ElementName=_camera, Path=Position.X}"
+                                               CenterY="{Binding ElementName=_camera, Path=Position.Y}"
+                                               CenterZ="{Binding ElementName=_camera, Path=Position.Z}">
+                                <RotateTransform3D.Rotation>
+                                    <AxisAngleRotation3D x:Name="_rotateY" Axis="0 1 0"></AxisAngleRotation3D>
+                                </RotateTransform3D.Rotation>
+                            </RotateTransform3D>
+                            <TranslateTransform3D OffsetX="0" OffsetY="0" OffsetZ="0" x:Name="_translate"/>
+                        </Transform3DGroup>                          
+                    </PerspectiveCamera.Transform>
+                </PerspectiveCamera>
+            </Viewport3D.Camera>
+            <ModelVisual3D>
+                <ModelVisual3D.Content>
+                    <GeometryModel3D>
+                        <GeometryModel3D.Geometry>
+                            <MeshGeometry3D Positions="1,1,0 -1,1,0 -1,-1,0 1,-1,0" 
+                                            Normals="0 0 1, 0 0 1, 0 0 1, 0 0 1"
+                                            TextureCoordinates="1 0, 0 0, 0 1, 1 1"
+                                            TriangleIndices="0,1,3 3,1,2"/>
+                        </GeometryModel3D.Geometry>
+                        <GeometryModel3D.Material>
+                            <DiffuseMaterial Brush="{StaticResource WallBrush}"/>
+                        </GeometryModel3D.Material>
+                        <GeometryModel3D.BackMaterial>
+                            <DiffuseMaterial Brush="{StaticResource WallBrush}"/>
+                        </GeometryModel3D.BackMaterial>
+                    </GeometryModel3D>
+                </ModelVisual3D.Content>
+            </ModelVisual3D>
+            <ModelVisual3D>
+                <ModelVisual3D.Content>
+                    <AmbientLight Color="White"/>
+                </ModelVisual3D.Content>
+            </ModelVisual3D>
+        </Viewport3D>
+        <Path Height="40"
+              Width="40"
+              HorizontalAlignment="Center" VerticalAlignment="Center"
+              Data="M 20 0 v 13 M 20 28 v 13 M 0 20 h 13 M 28 20 h 13" Stroke="LightGreen" StrokeThickness="2"/>
+    </Grid>
+</Window>

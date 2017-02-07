@@ -1,0 +1,12 @@
+D:\RMay\Documents\Visual Studio 2008\Projects\Tests\WPFDigging\Test3D\bin\Debug\Test3D.exe
+D:\RMay\Documents\Visual Studio 2008\Projects\Tests\WPFDigging\Test3D\bin\Debug\Test3D.pdb
+D:\RMay\Documents\Visual Studio 2008\Projects\Tests\WPFDigging\Test3D\obj\Debug\ResolveAssemblyReference.cache
+D:\RMay\Documents\Visual Studio 2008\Projects\Tests\WPFDigging\Test3D\obj\Debug\Window1.baml
+D:\RMay\Documents\Visual Studio 2008\Projects\Tests\WPFDigging\Test3D\obj\Debug\Window1.g.cs
+D:\RMay\Documents\Visual Studio 2008\Projects\Tests\WPFDigging\Test3D\obj\Debug\App.g.cs
+D:\RMay\Documents\Visual Studio 2008\Projects\Tests\WPFDigging\Test3D\obj\Debug\Test3D_MarkupCompile.cache
+D:\RMay\Documents\Visual Studio 2008\Projects\Tests\WPFDigging\Test3D\obj\Debug\Test3D.g.resources
+D:\RMay\Documents\Visual Studio 2008\Projects\Tests\WPFDigging\Test3D\obj\Debug\Test3D.Properties.Resources.resources
+D:\RMay\Documents\Visual Studio 2008\Projects\Tests\WPFDigging\Test3D\obj\Debug\Test3D.csproj.GenerateResource.Cache
+D:\RMay\Documents\Visual Studio 2008\Projects\Tests\WPFDigging\Test3D\obj\Debug\Test3D.exe
+D:\RMay\Documents\Visual Studio 2008\Projects\Tests\WPFDigging\Test3D\obj\Debug\Test3D.pdb
